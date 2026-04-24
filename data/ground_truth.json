@@ -1,0 +1,7358 @@
+{
+  "c0000": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0001": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0002": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0003": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0004": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Remote EU",
+    "total_yoe": 2,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0005": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0006": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0007": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0008": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "Postgres",
+      "Sidekiq"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0009": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 17,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0010": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0011": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0012": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 8,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0013": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0014": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0015": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0016": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 5,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0017": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0018": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0019": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 13,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0020": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 13,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0021": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0022": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0023": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Remote EU",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0024": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0025": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 14,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0026": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0027": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0028": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0029": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Paris, France",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0030": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0031": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0032": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Dublin, Ireland",
+    "total_yoe": 18,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0033": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0034": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0035": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0036": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0037": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0038": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0039": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0040": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0041": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0042": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0043": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 7,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0044": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0045": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0046": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0047": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 12,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0048": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0049": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 10,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0050": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0051": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0052": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0053": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 9,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0054": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 14,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0055": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0056": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0057": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0058": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Remote EU",
+    "total_yoe": 2,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0059": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0060": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0061": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0062": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0063": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0064": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 3,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0065": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0066": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0067": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0068": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0069": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 14,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0070": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 16,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0071": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0072": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0073": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0074": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Paris, France",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0075": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0076": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 14,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0077": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0078": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0079": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 17,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0080": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 17,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0081": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0082": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 14,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0083": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0084": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 17,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0085": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 5,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0086": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0087": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0088": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0089": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0090": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 2,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0091": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0092": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0093": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0094": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0095": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0096": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0097": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0098": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0099": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 15,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0100": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0101": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0102": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0103": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0104": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 3,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0105": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0106": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0107": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0108": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 9,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0109": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 15,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0110": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0111": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "Postgres",
+      "Redis"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0112": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0113": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0114": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 4,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0115": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0116": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0117": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0118": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0119": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0120": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0121": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 13,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0122": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0123": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0124": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0125": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0126": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0127": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 15,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0128": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0129": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 17,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0130": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 10,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0131": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0132": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0133": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 8,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0134": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 2,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0135": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0136": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0137": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0138": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0139": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0140": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0141": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0142": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0143": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "Postgres",
+      "Redis"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0144": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0145": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0146": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0147": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0148": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0149": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0150": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0151": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0152": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0153": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0154": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Dublin, Ireland",
+    "total_yoe": 17,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0155": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0156": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0157": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0158": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 6,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0159": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0160": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0161": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0162": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0163": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0164": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0165": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0166": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0167": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0168": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0169": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0170": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0171": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0172": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0173": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0174": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 18,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0175": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0176": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0177": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 7,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0178": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0179": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 2,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0180": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0181": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0182": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 17,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0183": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 12,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0184": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0185": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0186": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0187": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 15,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0188": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0189": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0190": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0191": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Remote EU",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0192": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0193": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0194": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0195": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0196": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0197": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 7,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0198": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0199": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0200": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0201": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 5,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0202": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0203": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0204": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0205": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0206": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0207": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0208": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0209": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 2,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0210": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0211": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 5,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0212": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0213": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0214": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0215": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 9,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0216": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0217": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0218": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Paris, France",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0219": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Dublin, Ireland",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0220": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0221": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0222": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "Postgres",
+      "Redis"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0223": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0224": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0225": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0226": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0227": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0228": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0229": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0230": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0231": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0232": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0233": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0234": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0235": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 1,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0236": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0237": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 6,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0238": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0239": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0240": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0241": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 6,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0242": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 18,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0243": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0244": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0245": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Dublin, Ireland",
+    "total_yoe": 13,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0246": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0247": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0248": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0249": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 13,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0250": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0251": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Remote EU",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0252": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0253": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0254": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 13,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0255": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0256": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0257": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0258": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0259": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0260": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0261": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0262": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0263": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0264": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0265": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0266": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0267": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0268": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0269": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0270": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0271": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Dublin, Ireland",
+    "total_yoe": 13,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0272": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 9,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0273": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0274": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0275": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 8,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0276": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0277": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0278": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0279": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0280": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0281": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0282": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 7,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0283": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 9,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0284": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0285": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0286": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 18,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0287": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0288": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0289": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0290": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0291": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0292": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "Postgres",
+      "Sidekiq"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0293": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0294": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0295": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0296": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0297": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 2,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0298": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0299": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0300": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 7,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0301": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0302": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 17,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0303": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0304": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0305": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0306": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0307": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0308": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0309": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0310": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 5,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0311": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Paris, France",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0312": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0313": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0314": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0315": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 4,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0316": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 7,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0317": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0318": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0319": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0320": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0321": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0322": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0323": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0324": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 6,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0325": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0326": {
+    "role_family": "backend",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "Postgres",
+      "Redis"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0327": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0328": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0329": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0330": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0331": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0332": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0333": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 7,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0334": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "Postgres",
+      "Redis"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0335": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 13,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0336": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0337": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0338": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 10,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0339": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0340": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0341": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0342": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0343": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0344": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0345": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0346": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0347": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0348": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0349": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0350": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0351": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0352": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 12,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0353": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0354": {
+    "role_family": "frontend",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0355": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0356": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0357": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0358": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0359": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0360": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 7,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0361": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0362": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0363": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0364": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0365": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0366": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0367": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 3,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0368": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0369": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 15,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0370": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0371": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0372": {
+    "role_family": "fullstack",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0373": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0374": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0375": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0376": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 17,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0377": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0378": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0379": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0380": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0381": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0382": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 4,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0383": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 18,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0384": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0385": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0386": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0387": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0388": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0389": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0390": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Barcelona, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0391": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Paris, France",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0392": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 11,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0393": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "London, United Kingdom",
+    "total_yoe": 8,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0394": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0395": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0396": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Python",
+      "Hugging Face",
+      "ONNX",
+      "Triton"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0397": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0398": {
+    "role_family": "ml_engineer",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0399": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0400": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "London, United Kingdom",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0401": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0402": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0403": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0404": {
+    "role_family": "ml_engineer",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0405": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0406": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0407": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0408": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0409": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0410": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "Postgres",
+      "Sidekiq"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0411": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Angular",
+      "TypeScript",
+      "RxJS"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0412": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0413": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0414": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0415": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0416": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Python",
+      "Ray",
+      "MLflow",
+      "Kubernetes"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0417": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0418": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Hamburg, Germany",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0419": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 7,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0420": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 3,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0421": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0422": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Berlin, Germany",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0423": {
+    "role_family": "devops",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Prometheus"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0424": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0425": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0426": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0427": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 17,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0428": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0429": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0430": {
+    "role_family": "frontend",
+    "seniority": "staff",
+    "location": "London, United Kingdom",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Vue",
+      "Nuxt",
+      "TypeScript",
+      "Vite"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0431": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0432": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Berlin, Germany",
+    "total_yoe": 6,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0433": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0434": {
+    "role_family": "devops",
+    "seniority": "junior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0435": {
+    "role_family": "product_manager",
+    "seniority": "junior",
+    "location": "Paris, France",
+    "total_yoe": 1,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0436": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 1,
+    "tech_stack": [
+      "Svelte",
+      "SvelteKit",
+      "TypeScript"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0437": {
+    "role_family": "data_scientist",
+    "seniority": "mid",
+    "location": "Remote EU",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0438": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "adtech"
+    ]
+  },
+  "c0439": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Madrid, Spain",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0440": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 2,
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "tRPC",
+      "Postgres"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0441": {
+    "role_family": "mobile",
+    "seniority": "senior",
+    "location": "Hamburg, Germany",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0442": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0443": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0444": {
+    "role_family": "mobile",
+    "seniority": "junior",
+    "location": "Berlin, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0445": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 8,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0446": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Docker",
+      "Ansible",
+      "GCP",
+      "Bash"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0447": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 16,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0448": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "Kubeflow",
+      "GCP"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0449": {
+    "role_family": "ml_engineer",
+    "seniority": "staff",
+    "location": "Hamburg, Germany",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0450": {
+    "role_family": "backend",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 14,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0451": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 3,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0452": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0453": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 11,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0454": {
+    "role_family": "ml_engineer",
+    "seniority": "mid",
+    "location": "Madrid, Spain",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "AWS SageMaker",
+      "Docker"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0455": {
+    "role_family": "devops",
+    "seniority": "staff",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Terraform",
+      "Azure",
+      "GitHub Actions",
+      "PowerShell"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0456": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0457": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 3,
+    "tech_stack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0458": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 11,
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "Jupyter",
+      "SQL"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0459": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0460": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Munich, Germany",
+    "total_yoe": 16,
+    "tech_stack": [
+      "SQL",
+      "Mixpanel",
+      "Notion",
+      "Linear"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0461": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Kafka"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0462": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 16,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0463": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0464": {
+    "role_family": "frontend",
+    "seniority": "junior",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 1,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0465": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Remote EU",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0466": {
+    "role_family": "fullstack",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 5,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0467": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0468": {
+    "role_family": "devops",
+    "seniority": "mid",
+    "location": "Munich, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Python"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0469": {
+    "role_family": "product_manager",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 10,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0470": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 3,
+    "tech_stack": [
+      "React Native",
+      "TypeScript",
+      "Expo"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0471": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Dublin, Ireland",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0472": {
+    "role_family": "fullstack",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0473": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Rust",
+      "Tokio",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0474": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0475": {
+    "role_family": "designer",
+    "seniority": "junior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 2,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0476": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 4,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0477": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Amsterdam, Netherlands",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0478": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Paris, France",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0479": {
+    "role_family": "designer",
+    "seniority": "mid",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 6,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  },
+  "c0480": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 15,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0481": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "London, United Kingdom",
+    "total_yoe": 4,
+    "tech_stack": [
+      "SQL",
+      "Amplitude",
+      "Figma",
+      "Jira"
+    ],
+    "domains": [
+      "gaming"
+    ]
+  },
+  "c0482": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 10,
+    "tech_stack": [
+      "Python",
+      "Django",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0483": {
+    "role_family": "product_manager",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 13,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0484": {
+    "role_family": "backend",
+    "seniority": "mid",
+    "location": "Berlin, Germany",
+    "total_yoe": 4,
+    "tech_stack": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "MySQL"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0485": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Stockholm, Sweden",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Ruby",
+      "Rails",
+      "React",
+      "Postgres"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0486": {
+    "role_family": "data_scientist",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 17,
+    "tech_stack": [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Spark"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0487": {
+    "role_family": "designer",
+    "seniority": "senior",
+    "location": "Madrid, Spain",
+    "total_yoe": 7,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0488": {
+    "role_family": "mobile",
+    "seniority": "staff",
+    "location": "Remote EU",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Swift",
+      "iOS",
+      "Combine",
+      "CoreData"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0489": {
+    "role_family": "frontend",
+    "seniority": "mid",
+    "location": "Dublin, Ireland",
+    "total_yoe": 6,
+    "tech_stack": [
+      "React",
+      "Redux",
+      "Webpack",
+      "JavaScript"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0490": {
+    "role_family": "product_manager",
+    "seniority": "mid",
+    "location": "Lisbon, Portugal",
+    "total_yoe": 3,
+    "tech_stack": [
+      "SQL",
+      "Looker",
+      "Figma"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0491": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Barcelona, Spain",
+    "total_yoe": 13,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "consumer"
+    ]
+  },
+  "c0492": {
+    "role_family": "fullstack",
+    "seniority": "senior",
+    "location": "Munich, Germany",
+    "total_yoe": 9,
+    "tech_stack": [
+      "Node.js",
+      "Express",
+      "React",
+      "MongoDB"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0493": {
+    "role_family": "data_scientist",
+    "seniority": "junior",
+    "location": "Munich, Germany",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Python",
+      "pandas",
+      "scikit-learn",
+      "SQL"
+    ],
+    "domains": [
+      "edtech"
+    ]
+  },
+  "c0494": {
+    "role_family": "data_scientist",
+    "seniority": "senior",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 9,
+    "tech_stack": [
+      "R",
+      "tidyverse",
+      "SQL",
+      "Tableau"
+    ],
+    "domains": [
+      "cybersecurity"
+    ]
+  },
+  "c0495": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "logistics"
+    ]
+  },
+  "c0496": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Madrid, Spain",
+    "total_yoe": 12,
+    "tech_stack": [
+      "Figma",
+      "Sketch",
+      "User Research"
+    ],
+    "domains": [
+      "enterprise_saas"
+    ]
+  },
+  "c0497": {
+    "role_family": "mobile",
+    "seniority": "mid",
+    "location": "Zurich, Switzerland",
+    "total_yoe": 3,
+    "tech_stack": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Coroutines"
+    ],
+    "domains": [
+      "e-commerce"
+    ]
+  },
+  "c0498": {
+    "role_family": "designer",
+    "seniority": "staff",
+    "location": "Copenhagen, Denmark",
+    "total_yoe": 15,
+    "tech_stack": [
+      "Figma",
+      "Framer",
+      "Motion"
+    ],
+    "domains": [
+      "fintech"
+    ]
+  },
+  "c0499": {
+    "role_family": "backend",
+    "seniority": "junior",
+    "location": "Barcelona, Spain",
+    "total_yoe": 1,
+    "tech_stack": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure"
+    ],
+    "domains": [
+      "healthcare"
+    ]
+  }
+}
