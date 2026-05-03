@@ -5,6 +5,7 @@ from pathlib import Path
 
 import numpy as np
 from tenacity import retry, stop_after_attempt, wait_exponential
+from tqdm import tqdm
 
 from hiring_agents.config import (
     CANDIDATES_PATH,
@@ -12,7 +13,6 @@ from hiring_agents.config import (
     EMBEDDINGS_PATH,
     EXTRACTION_MODEL,
     EXTRACTION_TEMPERATURE,
-    INGEST_LOG_EVERY,
     INGESTED_PATH,
     LLM_MAX_ATTEMPTS,
     LLM_RETRY_WAIT_MAX_SECONDS,
@@ -62,17 +62,18 @@ def ingest_all(
         return cached
 
     logger.info("ingest cache miss: processing %d candidates", len(candidates))
-    ingested = [_process(c, i, len(candidates)) for i, c in enumerate(candidates, start=1)]
+    ingested = [
+        _process(c)
+        for c in tqdm(candidates, desc="ingesting", unit="candidate")
+    ]
     embeddings = embed_documents([c.summary for c in ingested])
     _save_cache(source_hash, ingested, embeddings, ingested_path, embeddings_path)
     return ingested, embeddings
 
 
-def _process(cand: Candidate, index: int, total: int) -> IngestedCandidate:
+def _process(cand: Candidate) -> IngestedCandidate:
     structured = _extract_structured(cand.resume_text)
     summary = _write_summary(cand.resume_text, structured)
-    if index % INGEST_LOG_EVERY == 0:
-        logger.info("ingested %d/%d", index, total)
     return IngestedCandidate(
         candidate_id=cand.candidate_id,
         resume_text=cand.resume_text,

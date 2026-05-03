@@ -1,0 +1,22 @@
+[
+  {
+    "query_id": "q1",
+    "raw": "senior python backend engineer"
+  },
+  {
+    "query_id": "q2",
+    "raw": "machine learning engineer pytorch"
+  },
+  {
+    "query_id": "q3",
+    "raw": "We need a Senior Frontend Engineer to lead our consumer app web experience. Strong React and TypeScript are required; you will architect reusable component libraries, mentor junior engineers, and drive front-end performance improvements."
+  },
+  {
+    "query_id": "q4",
+    "raw": "Seeking a Data Scientist to join our analytics team. You will build predictive models, run A/B experiments, and develop SQL dashboards. Python and SQL are must-haves."
+  },
+  {
+    "query_id": "q5",
+    "raw": "Staff-level DevOps engineer with deep Kubernetes expertise. We are a small team and you will own all infrastructure. Terraform and cloud platform experience required."
+  }
+]
