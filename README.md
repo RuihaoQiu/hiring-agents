@@ -3,7 +3,8 @@
 Synthetic-data PoC for a recruiting pipeline: `normalize → retrieve → rerank`,
 with an eval harness over 5 queries.
 
-See [plan.md](plan.md) for the full design.
+- [docs/plan.md](docs/plan.md) — architecture, schema, config surface, directory layout
+- [docs/vision.md](docs/vision.md) — decisions, eval results, lessons learned, v1 roadmap
 
 ## Setup
 
@@ -23,4 +24,4 @@ make all-checks                      # ruff + pytest
 
 ## Layout
 
-See [plan.md](plan.md#directory-layout).
+See [docs/plan.md](docs/plan.md#directory-layout).

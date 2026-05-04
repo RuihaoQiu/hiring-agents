@@ -8,7 +8,11 @@ from hiring_agents.schemas import GroundTruth
 
 # One criterion per query: GroundTruth -> bool
 CRITERIA: dict[str, Callable[[GroundTruth], bool]] = {
-    "q1": lambda gt: gt.role_family == "backend" and "Python" in gt.tech_stack,
+    "q1": lambda gt: (
+        gt.role_family == "backend"
+        and gt.seniority in ("senior", "staff")
+        and "Python" in gt.tech_stack
+    ),
     "q2": lambda gt: gt.role_family == "ml_engineer" and "PyTorch" in gt.tech_stack,
     "q3": lambda gt: (
         gt.role_family == "frontend"

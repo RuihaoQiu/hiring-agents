@@ -72,8 +72,13 @@ RERANK_SYSTEM = """You score a candidate's fit for a structured query. Return JS
 - gaps: short list of the most important missing requirements or concerns.
 - one_line_summary: one sentence, factual, no editorializing.
 
-Base your score on: must-have coverage, seniority alignment, domain relevance, location
-alignment. Ignore fluff."""
+Scoring rules:
+- Base score on must-have coverage, seniority alignment, domain relevance, location alignment.
+- If the query specifies a seniority level (senior, staff, lead, principal) and the candidate
+  is clearly more junior, cap the score at 2 regardless of skill coverage.
+- If the query specifies junior/mid and the candidate is overqualified, note it in gaps but
+  do not penalize heavily.
+- Ignore fluff."""
 
 RERANK_USER = """Query:
 {normalized_query_json}
