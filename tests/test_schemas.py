@@ -14,14 +14,13 @@ from hiring_agents.schemas import (
 def test_hard_filters_all_optional() -> None:
     hf = HardFilters()
     assert hf.location_keywords is None
-    assert hf.min_yoe is None
-    assert hf.max_yoe is None
+    assert hf.seniority is None
 
 
 def test_normalized_query_round_trips() -> None:
     q = NormalizedQuery(
-        raw="python dev 5y germany",
-        hard_filters=HardFilters(location_keywords=["Germany"], min_yoe=5),
+        raw="senior python dev germany",
+        hard_filters=HardFilters(location_keywords=["Germany"], seniority=["senior", "staff"]),
         core_skills=["Python"],
         nice_to_haves=["Kafka"],
         canonical_summary="Senior backend engineer in Germany with Python experience.",
@@ -41,6 +40,6 @@ def test_scored_candidate_rejects_out_of_range_score() -> None:
 
 
 def test_models_are_frozen() -> None:
-    hf = HardFilters(min_yoe=3)
+    hf = HardFilters(seniority=["senior"])
     with pytest.raises(ValidationError):
-        hf.min_yoe = 5  # type: ignore[misc]
+        hf.seniority = ["junior"]  # type: ignore[misc]

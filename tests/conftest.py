@@ -38,4 +38,5 @@ def sample_ingested(sample_structured: StructuredResume) -> IngestedCandidate:
         resume_text="...",
         structured=sample_structured,
         summary="Senior backend engineer in Berlin with 7 years of experience in Python.",
+        inferred_seniority="senior",
     )

@@ -1,4 +1,4 @@
-.PHONY: sync format lint test generate query eval all-checks
+.PHONY: sync format lint test generate ingest query eval api ui all-checks
 
 sync:
 	uv sync
@@ -17,9 +17,18 @@ all-checks: lint test
 generate:
 	uv run python -m scripts.generate_data
 
+ingest:
+	uv run hiring-agents ingest
+
 eval:
 	uv run python -m scripts.run_eval
 
 query:
 	@test -n "$(Q)" || (echo "usage: make query Q='your query here'" && exit 1)
 	uv run hiring-agents query "$(Q)"
+
+api:
+	uv run uvicorn "hiring_agents.api.app:create_app" --factory --reload
+
+ui:
+	uv run streamlit run src/hiring_agents/ui/app.py

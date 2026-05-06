@@ -15,28 +15,31 @@ from hiring_agents.schemas import (
 )
 
 
-def _candidate(cid: str, location: str, yoe: int) -> IngestedCandidate:
+def _candidate(
+    cid: str, location: str, seniority: str | None = None
+) -> IngestedCandidate:
     return IngestedCandidate(
         candidate_id=cid,
         resume_text="...",
         structured=StructuredResume(
             location=location,
-            total_yoe=yoe,
+            total_yoe=5,
             current_title="Engineer",
             skills=["Python"],
             work_history=[],
         ),
         summary=f"summary {cid}",
+        inferred_seniority=seniority,
     )
 
 
 @pytest.fixture
 def pool() -> list[IngestedCandidate]:
     return [
-        _candidate("c01", "Berlin, Germany", 5),
-        _candidate("c02", "Munich, Germany", 3),
-        _candidate("c03", "Paris, France", 10),
-        _candidate("c04", "Berlin, Germany", 12),
+        _candidate("c01", "Berlin, Germany", "senior"),
+        _candidate("c02", "Munich, Germany", "junior"),
+        _candidate("c03", "Paris, France", "staff"),
+        _candidate("c04", "Berlin, Germany", "mid"),
     ]
 
 
@@ -87,21 +90,24 @@ def test_location_multi_keyword_is_or(pool: list[IngestedCandidate]) -> None:
     ) == [1, 2]
 
 
-def test_min_yoe(pool: list[IngestedCandidate]) -> None:
-    assert apply_hard_filters(pool, HardFilters(min_yoe=5)) == [0, 2, 3]
+def test_seniority_single_level(pool: list[IngestedCandidate]) -> None:
+    assert apply_hard_filters(pool, HardFilters(seniority=["senior"])) == [0]
 
 
-def test_max_yoe(pool: list[IngestedCandidate]) -> None:
-    assert apply_hard_filters(pool, HardFilters(max_yoe=5)) == [0, 1]
+def test_seniority_multi_level(pool: list[IngestedCandidate]) -> None:
+    assert apply_hard_filters(
+        pool, HardFilters(seniority=["senior", "staff"])
+    ) == [0, 2]
 
 
-def test_yoe_range(pool: list[IngestedCandidate]) -> None:
-    assert apply_hard_filters(pool, HardFilters(min_yoe=4, max_yoe=10)) == [0, 2]
+def test_seniority_unknown_passes(pool: list[IngestedCandidate]) -> None:
+    candidates = [_candidate("cx", "Berlin", None)]
+    assert apply_hard_filters(candidates, HardFilters(seniority=["senior"])) == [0]
 
 
-def test_combined_location_and_yoe(pool: list[IngestedCandidate]) -> None:
-    filters = HardFilters(location_keywords=["Germany"], min_yoe=10)
-    assert apply_hard_filters(pool, filters) == [3]
+def test_combined_location_and_seniority(pool: list[IngestedCandidate]) -> None:
+    filters = HardFilters(location_keywords=["Germany"], seniority=["senior"])
+    assert apply_hard_filters(pool, filters) == [0]
 
 
 def test_empty_result_when_no_location_match(pool: list[IngestedCandidate]) -> None:

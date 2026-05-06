@@ -1,15 +1,11 @@
 from __future__ import annotations
 
-from collections.abc import Sequence
-from pathlib import Path
-
 import numpy as np
 import pytest
 
-from hiring_agents import pipeline as pipeline_module
 from hiring_agents.config import EMBEDDING_DIM
+from hiring_agents.pipeline import run_pipeline
 from hiring_agents.schemas import (
-    Candidate,
     HardFilters,
     IngestedCandidate,
     MustHaveMatch,
@@ -18,10 +14,6 @@ from hiring_agents.schemas import (
     ScoredCandidate,
     StructuredResume,
 )
-
-
-def _candidate(cid: str) -> Candidate:
-    return Candidate(candidate_id=cid, resume_text="...")
 
 
 def _ingested(cid: str) -> IngestedCandidate:
@@ -36,39 +28,25 @@ def _ingested(cid: str) -> IngestedCandidate:
             work_history=[],
         ),
         summary=f"summary {cid}",
+        inferred_seniority="senior",
     )
 
 
 def test_pipeline_smoke_end_to_end(monkeypatch: pytest.MonkeyPatch) -> None:
-    three = [_candidate(f"c0{i}") for i in range(3)]
+    candidates = [_ingested(f"c0{i}") for i in range(3)]
+    embeddings = np.eye(len(candidates), EMBEDDING_DIM, dtype=np.float32)
 
-    def fake_load_models(path: Path, model: type) -> list[Candidate]:
-        return three
-
-    def fake_ingest_all(
-        candidates: list[Candidate],
-    ) -> tuple[list[IngestedCandidate], np.ndarray]:
-        ingested = [_ingested(c.candidate_id) for c in candidates]
-        embeddings = np.eye(len(ingested), EMBEDDING_DIM, dtype=np.float32)
-        return ingested, embeddings
-
-    def fake_normalize_query(raw: str) -> NormalizedQuery:
-        return NormalizedQuery(
-            raw=raw,
-            hard_filters=HardFilters(),
-            core_skills=["Python"],
-            nice_to_haves=[],
-            canonical_summary="canonical",
-        )
-
-    def fake_embed_query(text: str) -> np.ndarray:
-        v = np.zeros(EMBEDDING_DIM, dtype=np.float32)
-        v[0] = 1.0
-        return v
+    normalized = NormalizedQuery(
+        raw="python engineer",
+        hard_filters=HardFilters(),
+        core_skills=["Python"],
+        nice_to_haves=[],
+        canonical_summary="canonical",
+    )
 
     async def fake_rerank(
-        normalized: NormalizedQuery,
-        retrieved: Sequence[RetrievedCandidate],
+        norm: NormalizedQuery,
+        retrieved: list[RetrievedCandidate],
         top_k: int = 10,
         concurrency: int = 5,
     ) -> list[ScoredCandidate]:
@@ -76,22 +54,22 @@ def test_pipeline_smoke_end_to_end(monkeypatch: pytest.MonkeyPatch) -> None:
             ScoredCandidate(
                 candidate_id=rc.candidate.candidate_id,
                 score=5,
-                must_have_matches=[
-                    MustHaveMatch(requirement="Python", met=True, evidence="ok")
-                ],
+                must_have_matches=[MustHaveMatch(requirement="Python", met=True, evidence="ok")],
                 gaps=[],
                 one_line_summary=f"{rc.candidate.candidate_id} OK",
             )
             for rc in retrieved[:top_k]
         ]
 
-    monkeypatch.setattr(pipeline_module, "load_models", fake_load_models)
-    monkeypatch.setattr(pipeline_module, "ingest_all", fake_ingest_all)
-    monkeypatch.setattr(pipeline_module, "normalize_query", fake_normalize_query)
-    monkeypatch.setattr(pipeline_module, "embed_query", fake_embed_query)
-    monkeypatch.setattr(pipeline_module, "rerank", fake_rerank)
+    query_vec = np.zeros(EMBEDDING_DIM, dtype=np.float32)
+    query_vec[0] = 1.0
 
-    output = pipeline_module.run_pipeline("python engineer")
+    monkeypatch.setattr("hiring_agents.graph.load_node", lambda s: {"candidates": candidates, "embeddings": embeddings})
+    monkeypatch.setattr("hiring_agents.graph.normalize_query", lambda raw: normalized)
+    monkeypatch.setattr("hiring_agents.graph.embed_query", lambda text: query_vec)
+    monkeypatch.setattr("hiring_agents.graph.rerank", fake_rerank)
+
+    output = run_pipeline("python engineer")
 
     assert output.normalized.raw == "python engineer"
     assert len(output.retrieved) == 3

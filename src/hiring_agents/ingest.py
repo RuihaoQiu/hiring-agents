@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -13,10 +14,13 @@ from hiring_agents.config import (
     EMBEDDINGS_PATH,
     EXTRACTION_MODEL,
     EXTRACTION_TEMPERATURE,
+    INGEST_CONCURRENCY,
     INGESTED_PATH,
     LLM_MAX_ATTEMPTS,
     LLM_RETRY_WAIT_MAX_SECONDS,
     LLM_RETRY_WAIT_MIN_SECONDS,
+    SENIORITY_INFER_MODEL,
+    SENIORITY_VOCAB,
     SUMMARY_MODEL,
     SUMMARY_TEMPERATURE,
 )
@@ -30,10 +34,12 @@ from hiring_agents.io_utils import (
 from hiring_agents.llm.client import get_sync_client
 from hiring_agents.llm.embeddings import embed_documents
 from hiring_agents.llm.prompts import (
+    SENIORITY_INFERENCE_SYSTEM,
     STRUCTURED_EXTRACTION_SYSTEM,
     SUMMARY_SYSTEM,
     SUMMARY_USER,
 )
+from hiring_agents.llm.tracing import observe_generation
 from hiring_agents.schemas import Candidate, IngestedCandidate, StructuredResume
 
 logger = logging.getLogger(__name__)
@@ -62,10 +68,10 @@ def ingest_all(
         return cached
 
     logger.info("ingest cache miss: processing %d candidates", len(candidates))
-    ingested = [
-        _process(c)
-        for c in tqdm(candidates, desc="ingesting", unit="candidate")
-    ]
+    with ThreadPoolExecutor(max_workers=INGEST_CONCURRENCY) as executor:
+        ingested = list(
+            tqdm(executor.map(_process, candidates), total=len(candidates), desc="ingesting", unit="candidate")
+        )
     embeddings = embed_documents([c.summary for c in ingested])
     _save_cache(source_hash, ingested, embeddings, ingested_path, embeddings_path)
     return ingested, embeddings
@@ -74,12 +80,36 @@ def ingest_all(
 def _process(cand: Candidate) -> IngestedCandidate:
     structured = _extract_structured(cand.resume_text)
     summary = _write_summary(cand.resume_text, structured)
+    seniority = _infer_seniority(structured)
     return IngestedCandidate(
         candidate_id=cand.candidate_id,
         resume_text=cand.resume_text,
         structured=structured,
         summary=summary,
+        inferred_seniority=seniority,
     )
+
+
+@_RETRY
+def _infer_seniority(structured: StructuredResume) -> str | None:
+    history = "; ".join(
+        f"{e.title} at {e.company}" for e in structured.work_history
+    )
+    user = f"Current title: {structured.current_title}\nWork history: {history}"
+    client = get_sync_client()
+    with observe_generation(name="seniority-inference", model=SENIORITY_INFER_MODEL, input=user) as gen:
+        resp = client.chat.completions.create(
+            model=SENIORITY_INFER_MODEL,
+            temperature=0.0,
+            messages=[
+                {"role": "system", "content": SENIORITY_INFERENCE_SYSTEM},
+                {"role": "user", "content": user},
+            ],
+            max_tokens=10,
+        )
+        content = (resp.choices[0].message.content or "").strip().lower()
+        gen.update(output=content)
+    return next((v for v in SENIORITY_VOCAB if v in content), None)
 
 
 @_RETRY

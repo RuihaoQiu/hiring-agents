@@ -35,6 +35,7 @@ class IngestedCandidate(_Frozen):
     resume_text: str
     structured: StructuredResume
     summary: str
+    inferred_seniority: str | None = None
 
 
 class GroundTruth(_Frozen):
@@ -48,8 +49,7 @@ class GroundTruth(_Frozen):
 
 class HardFilters(_Frozen):
     location_keywords: list[str] | None = None
-    min_yoe: int | None = None
-    max_yoe: int | None = None
+    seniority: list[str] | None = None
 
 
 class NormalizedQuery(_Frozen):

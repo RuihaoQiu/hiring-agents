@@ -22,13 +22,17 @@ RERANK_TEMPERATURE: float = 0.0
 SUMMARY_WORD_MIN: int = 200
 SUMMARY_WORD_MAX: int = 300
 
-RETRIEVAL_TOP_K: int = 20
+RETRIEVAL_TOP_K: int = 10
 RERANK_TOP_K: int = 10
+INGEST_CONCURRENCY: int = 10
 RERANK_CONCURRENCY: int = 5
 RERANK_MAX_RETRIES: int = 1
 
 SCORE_MIN: int = 1
 SCORE_MAX: int = 5
+
+SENIORITY_VOCAB: list[str] = ["junior", "mid", "senior", "staff", "principal"]
+SENIORITY_INFER_MODEL: str = EXTRACTION_MODEL
 
 LLM_MAX_ATTEMPTS: int = 3
 LLM_RETRY_WAIT_MIN_SECONDS: int = 2
@@ -36,6 +40,10 @@ LLM_RETRY_WAIT_MAX_SECONDS: int = 10
 EMBED_BATCH_SIZE: int = 100
 GENERATION_LOG_EVERY: int = 25
 INGEST_LOG_EVERY: int = 25
+
+API_HOST: str = "0.0.0.0"
+API_PORT: int = 8000
+UI_API_BASE_URL: str = "http://localhost:8000"
 
 ROOT: Path = Path(__file__).resolve().parents[2]
 DATA_DIR: Path = ROOT / "data"

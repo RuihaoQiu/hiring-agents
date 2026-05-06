@@ -17,6 +17,7 @@ from hiring_agents.llm.prompts import (
     QUERY_NORMALIZATION_SYSTEM,
     QUERY_NORMALIZATION_USER,
 )
+from hiring_agents.llm.tracing import observe_generation
 from hiring_agents.schemas import HardFilters, NormalizedQuery
 
 logger = logging.getLogger(__name__)
@@ -40,18 +41,21 @@ class _NormalizedBody(BaseModel):
 def normalize_query(raw: str) -> NormalizedQuery:
     client = get_sync_client()
     user = QUERY_NORMALIZATION_USER.format(raw_query=raw)
-    resp = client.beta.chat.completions.parse(
-        model=NORMALIZE_MODEL,
-        temperature=NORMALIZE_TEMPERATURE,
-        messages=[
-            {"role": "system", "content": QUERY_NORMALIZATION_SYSTEM},
-            {"role": "user", "content": user},
-        ],
-        response_format=_NormalizedBody,
-    )
-    body = resp.choices[0].message.parsed
-    if body is None:
-        raise RuntimeError("query normalization returned no parsed content")
+    messages = [
+        {"role": "system", "content": QUERY_NORMALIZATION_SYSTEM},
+        {"role": "user", "content": user},
+    ]
+    with observe_generation(name="normalize", model=NORMALIZE_MODEL, input=messages) as gen:
+        resp = client.beta.chat.completions.parse(
+            model=NORMALIZE_MODEL,
+            temperature=NORMALIZE_TEMPERATURE,
+            messages=messages,
+            response_format=_NormalizedBody,
+        )
+        body = resp.choices[0].message.parsed
+        if body is None:
+            raise RuntimeError("query normalization returned no parsed content")
+        gen.update(output=body.model_dump_json())
     return NormalizedQuery(
         raw=raw,
         hard_filters=body.hard_filters,

@@ -41,6 +41,29 @@ def generate_command() -> None:
     logger.info("wrote %s and %s", CANDIDATES_PATH, GROUND_TRUTH_PATH)
 
 
+@app.command(name="ingest")
+def ingest_command(
+    force: bool = typer.Option(False, "--force", "-f", help="Force re-ingest even if cache is fresh"),
+) -> None:
+    """Ingest candidates: extract structured fields, write summaries, infer seniority, embed."""
+    configure_logging()
+    from hiring_agents.config import CANDIDATES_PATH, EMBEDDINGS_PATH, INGESTED_PATH
+    from hiring_agents.ingest import ingest_all
+    from hiring_agents.io_utils import load_models
+    from hiring_agents.schemas import Candidate
+    import logging
+
+    if force:
+        INGESTED_PATH.unlink(missing_ok=True)
+        EMBEDDINGS_PATH.unlink(missing_ok=True)
+
+    candidates = load_models(CANDIDATES_PATH, Candidate)
+    ingested, embeddings = ingest_all(candidates)
+    logging.getLogger(__name__).info(
+        "ingest complete: %d candidates, embeddings %s", len(ingested), embeddings.shape
+    )
+
+
 @app.command(name="query")
 def query_command(
     raw: str = typer.Argument(..., help="Free-text recruiter query"),

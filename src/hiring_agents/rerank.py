@@ -17,6 +17,7 @@ from hiring_agents.config import (
 )
 from hiring_agents.llm.client import get_async_client
 from hiring_agents.llm.prompts import RERANK_SYSTEM, RERANK_USER
+from hiring_agents.llm.tracing import observe_generation
 from hiring_agents.schemas import (
     MustHaveMatch,
     NormalizedQuery,
@@ -97,16 +98,24 @@ async def _call(normalized: NormalizedQuery, rc: RetrievedCandidate) -> _ScoredB
         normalized_query_json=normalized.model_dump_json(),
         candidate_payload_json=json.dumps(candidate_payload),
     )
-    resp = await client.beta.chat.completions.parse(
+    messages = [
+        {"role": "system", "content": RERANK_SYSTEM},
+        {"role": "user", "content": user},
+    ]
+    with observe_generation(
+        name="rerank",
         model=RERANK_MODEL,
-        temperature=RERANK_TEMPERATURE,
-        messages=[
-            {"role": "system", "content": RERANK_SYSTEM},
-            {"role": "user", "content": user},
-        ],
-        response_format=_ScoredBody,
-    )
-    parsed = resp.choices[0].message.parsed
-    if parsed is None:
-        raise RuntimeError("rerank returned no parsed content")
+        input=messages,
+        metadata={"candidate_id": rc.candidate.candidate_id},
+    ) as gen:
+        resp = await client.beta.chat.completions.parse(
+            model=RERANK_MODEL,
+            temperature=RERANK_TEMPERATURE,
+            messages=messages,
+            response_format=_ScoredBody,
+        )
+        parsed = resp.choices[0].message.parsed
+        if parsed is None:
+            raise RuntimeError("rerank returned no parsed content")
+        gen.update(output=parsed.model_dump_json())
     return parsed

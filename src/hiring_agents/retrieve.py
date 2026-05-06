@@ -12,7 +12,7 @@ def apply_hard_filters(
     for i, c in enumerate(candidates):
         if not _passes_location(c, filters.location_keywords):
             continue
-        if not _passes_yoe(c, filters.min_yoe, filters.max_yoe):
+        if not _passes_seniority(c, filters.seniority):
             continue
         allowed.append(i)
     return allowed
@@ -51,10 +51,11 @@ def _passes_location(
     return any(kw.lower() in location for kw in keywords)
 
 
-def _passes_yoe(
-    candidate: IngestedCandidate, min_yoe: int | None, max_yoe: int | None
+def _passes_seniority(
+    candidate: IngestedCandidate, allowed: list[str] | None
 ) -> bool:
-    yoe = candidate.structured.total_yoe
-    if min_yoe is not None and yoe < min_yoe:
-        return False
-    return max_yoe is None or yoe <= max_yoe
+    if not allowed:
+        return True
+    if candidate.inferred_seniority is None:
+        return True
+    return candidate.inferred_seniority in allowed

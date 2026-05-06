@@ -1,4 +1,4 @@
-from hiring_agents.config import SUMMARY_WORD_MAX, SUMMARY_WORD_MIN
+from hiring_agents.config import SENIORITY_VOCAB, SUMMARY_WORD_MAX, SUMMARY_WORD_MIN
 
 RESUME_GENERATION_SYSTEM = """You write realistic resume text for synthetic candidates.
 
@@ -48,10 +48,18 @@ Structured fields already extracted:
 
 Write the canonical summary."""
 
+SENIORITY_INFERENCE_SYSTEM = (
+    "Classify the seniority level of a candidate from their current title and work history.\n"
+    f"Choose exactly one from: {', '.join(SENIORITY_VOCAB)}.\n"
+    "Return only that single word, nothing else."
+)
+
 QUERY_NORMALIZATION_SYSTEM = """You normalize a recruiter's free-text search into a
 structured query for candidate retrieval. Return JSON only.
 
-- hard_filters: location_keywords (list of city/country strings), min_yoe, max_yoe.
+- hard_filters: location_keywords (list of city/country strings), seniority (list of
+  seniority levels from: junior, mid, senior, staff, principal). Only set seniority when
+  the query explicitly signals a level (e.g. "senior", "junior", "lead", "staff").
   Use null for anything the query doesn't specify.
 - core_skills: concrete required skills/technologies.
 - nice_to_haves: bonuses, not required.
