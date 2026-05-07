@@ -92,6 +92,16 @@ async def test_search_happy_path(client: AsyncClient) -> None:
     assert data["retrieved_count"] == 3
     assert len(data["ranked"]) == 3
     assert data["filters_relaxed"] is False
+    first = data["ranked"][0]
+    assert "current_title" in first
+    assert "current_employer" in first
+    assert "location" in first
+    assert "total_yoe" in first
+    assert "summary" in first
+    assert "work_history" in first
+    assert "skills" in first
+    assert "gaps" in first
+    assert "suggestion" in first
 
 
 async def test_search_empty_query_returns_422(client: AsyncClient) -> None:
