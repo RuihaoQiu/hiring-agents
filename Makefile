@@ -31,4 +31,4 @@ api:
 	uv run uvicorn "hiring_agents.api.app:create_app" --factory --reload
 
 ui:
-	uv run streamlit run src/hiring_agents/ui/app.py
+	uv run chainlit run src/hiring_agents/ui/app.py --port 8501

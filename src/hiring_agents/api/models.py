@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
-from hiring_agents.schemas import NormalizedQuery, WorkEntry
+from hiring_agents.schemas import HardFilters, NormalizedQuery, WorkEntry
 
 
 class RichCandidate(BaseModel):
@@ -21,6 +23,8 @@ class RichCandidate(BaseModel):
 
 class SearchRequest(BaseModel):
     query: str = Field(..., min_length=1)
+    mode: Literal["keyword", "jd", "strict"] = "keyword"
+    hard_filters: HardFilters | None = None
 
 
 class SearchResponse(BaseModel):

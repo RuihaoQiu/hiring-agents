@@ -17,9 +17,8 @@ dependencies = [
     "fastapi>=0.115",
     "uvicorn[standard]>=0.30",
     "langfuse>=2.0",
-    "streamlit>=1.40",
+    "chainlit>=2.0.0",
     "httpx>=0.27",
-    "pyarrow>=14,<20",
 ]
 
 [project.scripts]

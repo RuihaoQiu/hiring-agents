@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+from collections.abc import AsyncGenerator
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
@@ -14,6 +15,7 @@ from hiring_agents.config import (
     RERANK_TOP_K,
     SCORE_MAX,
     SCORE_MIN,
+    SKIP_RERANK,
 )
 from hiring_agents.llm.client import get_async_client
 from hiring_agents.llm.prompts import RERANK_SYSTEM, RERANK_USER

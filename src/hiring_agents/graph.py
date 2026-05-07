@@ -5,15 +5,15 @@ import logging
 
 from langgraph.graph import END, StateGraph
 
-from hiring_agents.config import CANDIDATES_PATH, RERANK_TOP_K, RETRIEVAL_TOP_K
+from hiring_agents.config import CANDIDATES_PATH, RERANK_TOP_K, RETRIEVAL_TOP_K, SKIP_RERANK
 from hiring_agents.graph_state import PipelineState
 from hiring_agents.ingest import ingest_all
 from hiring_agents.io_utils import load_models
 from hiring_agents.llm.embeddings import embed_query
-from hiring_agents.normalize import normalize_query
+from hiring_agents.normalize import normalize_jd, normalize_query
 from hiring_agents.rerank import rerank
 from hiring_agents.retrieve import apply_hard_filters, retrieve_top_k
-from hiring_agents.schemas import Candidate, HardFilters, PipelineOutput, RetrievedCandidate
+from hiring_agents.schemas import Candidate, HardFilters, NormalizedQuery, PipelineOutput, RetrievedCandidate
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +27,18 @@ def load_node(state: PipelineState) -> dict:
 
 
 def normalize_node(state: PipelineState) -> dict:
+    mode = state.get("mode", "keyword")
+    if mode == "strict":
+        filters = state.get("preset_filters") or HardFilters()
+        return {"normalized": NormalizedQuery(
+            raw=state["raw_query"],
+            hard_filters=filters,
+            core_skills=[],
+            nice_to_haves=[],
+            canonical_summary=state["raw_query"],
+        )}
+    if mode == "jd":
+        return {"normalized": normalize_jd(state["raw_query"])}
     return {"normalized": normalize_query(state["raw_query"])}
 
 
@@ -52,6 +64,12 @@ def relax_filters_node(state: PipelineState) -> dict:
 
 
 def rerank_node(state: PipelineState) -> dict:
+    if SKIP_RERANK:
+        ranked = [
+            ScoredCandidate(candidate_id=r.candidate.candidate_id, score=3, must_have_matches=[], gaps=[], one_line_summary="")
+            for r in state["retrieved"][:RERANK_TOP_K]
+        ]
+        return {"ranked": ranked}
     # graph.invoke() (sync, CLI/eval) — asyncio.run bridges the async rerank.
     # graph.ainvoke() (async, FastAPI in Step 3) requires an async version of this node.
     ranked = asyncio.run(rerank(state["normalized"], state["retrieved"], top_k=RERANK_TOP_K))
@@ -69,6 +87,8 @@ def output_node(state: PipelineState) -> dict:
 
 
 def _route_after_retrieve(state: PipelineState) -> str:
+    if state.get("mode") == "strict":
+        return "rerank"
     if len(state["retrieved"]) == 0 and not state.get("filters_relaxed"):
         return "relax_filters"
     return "rerank"

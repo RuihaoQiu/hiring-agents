@@ -71,6 +71,24 @@ QUERY_NORMALIZATION_USER = """Recruiter input:
 
 Normalize it."""
 
+JD_NORMALIZATION_SYSTEM = """You normalize a job description into a structured query for candidate retrieval. Return JSON only.
+
+- hard_filters: location_keywords (list of city/country strings from the JD's location
+  field), seniority (list from: junior, mid, senior, staff, principal). Only set
+  seniority when the JD explicitly states a level. Use null for anything not specified.
+- core_skills: must-have skills and technologies from "Requirements" or "Qualifications"
+  sections. Concrete technical skills only, not soft skills.
+- nice_to_haves: preferred skills from "Nice to have", "Bonus", or "Preferred" sections.
+  Empty list if no preferred section exists.
+- canonical_summary: 100-150 word dense description of the ideal candidate in the same
+  style as candidate summaries (no editorializing, concrete specifics). Synthesise from
+  the full JD."""
+
+JD_NORMALIZATION_USER = """Job description:
+{jd_text}
+
+Normalize it."""
+
 RERANK_SYSTEM = """You score a candidate's fit for a structured query. Return JSON only.
 
 - score: 1 (poor fit) to 5 (excellent fit).

@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 RANDOM_SEED: int = 42
@@ -24,6 +25,7 @@ SUMMARY_WORD_MAX: int = 300
 
 RETRIEVAL_TOP_K: int = 10
 RERANK_TOP_K: int = 10
+SKIP_RERANK: bool = os.getenv("SKIP_RERANK", "").lower() in ("1", "true", "yes")
 INGEST_CONCURRENCY: int = 10
 RERANK_CONCURRENCY: int = 5
 RERANK_MAX_RETRIES: int = 1

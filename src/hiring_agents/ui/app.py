@@ -1,166 +1,254 @@
+"""Chainlit UI for Hiring Agents."""
+
 from __future__ import annotations
 
+import csv
+import io
+import json
+from typing import Any
+
+import chainlit as cl
 import httpx
-import streamlit as st
 
-from hiring_agents.config import UI_API_BASE_URL
+from hiring_agents.config import SENIORITY_VOCAB, UI_API_BASE_URL
+from hiring_agents.data_gen.axes import LOCATIONS
 
-_TEAL = "#0D9488"
-_MUTED = "#717182"
-_BORDER = "rgba(0,0,0,0.1)"
-
-_CSS = f"""
-<style>
-/* Card-style expanders */
-div[data-testid="stExpander"] {{
-    border: 1px solid {_BORDER};
-    border-radius: 10px;
-    margin-bottom: 8px;
-    overflow: hidden;
-    background: #ffffff;
-}}
-div[data-testid="stExpander"] summary {{
-    padding: 14px 18px;
-    font-size: 0.95rem;
-}}
-div[data-testid="stExpander"] summary:hover {{
-    background: #f9f9fb;
-}}
-div[data-testid="stExpanderDetails"] {{
-    border-top: 1px solid {_BORDER};
-    padding: 4px 18px 16px;
-}}
-/* Section labels */
-.section-label {{
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: {_MUTED};
-    margin: 14px 0 4px;
-}}
-/* Skill tags */
-.skill-tag {{
-    display: inline-block;
-    background: #f3f3f5;
-    border-radius: 6px;
-    padding: 2px 10px;
-    font-size: 0.82rem;
-    margin: 2px 3px 2px 0;
-    color: #333;
-}}
-/* Score dots */
-.score-dots {{
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-}}
-/* Filters-relaxed banner */
-.relax-banner {{
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 0.88rem;
-    color: #9a3412;
-    margin-bottom: 16px;
-}}
-</style>
-"""
+_ANY = "Any"
+_FILLED = "●"
+_EMPTY = "○"
 
 
-def _dots_html(score: int, max_score: int = 5) -> str:
-    filled = f'<span style="color:{_TEAL}">{"●" * score}</span>'
-    empty = f'<span style="color:#d5d5d5">{"●" * (max_score - score)}</span>'
-    return f'<span class="score-dots">{filled}{empty}</span>'
+def _dots(score: int, max_score: int = 5) -> str:
+    return _FILLED * score + _EMPTY * (max_score - score)
 
 
-def _call_api(query: str) -> dict:
-    resp = httpx.post(f"{UI_API_BASE_URL}/search", json={"query": query}, timeout=60)
-    resp.raise_for_status()
-    return resp.json()
-
-
-def _render_query_details(normalized: dict) -> None:
-    with st.expander("Query details"):
-        hf = normalized["hard_filters"]
-        cols = st.columns(3)
-        cols[0].markdown(f"**Seniority**  \n{', '.join(hf['seniority']) if hf.get('seniority') else '—'}")
-        cols[1].markdown(f"**Location**  \n{', '.join(hf['location_keywords']) if hf.get('location_keywords') else '—'}")
-        cols[2].markdown(f"**Core skills**  \n{', '.join(normalized['core_skills']) or '—'}")
-        if normalized["nice_to_haves"]:
-            st.markdown(f"**Nice-to-haves:** {', '.join(normalized['nice_to_haves'])}")
-        st.caption(normalized["canonical_summary"])
-
-
-def _render_card(c: dict) -> None:
-    label = (
-        f"**{c['candidate_id']}**"
-        f"  ·  {c['current_title']}"
-        f"  ·  {c['current_employer']}"
-        f"  ·  {c['location']}"
-        f"  ·  {c['total_yoe']} yrs"
-        f"  ·  {'●' * c['score']}{'●' * (5 - c['score'])}"
+def _candidate_md(c: dict) -> str:
+    work = "\n".join(
+        f"- **{e['title']}** at {e['company']} · {e['start_year']}–{e['end_year'] or 'present'}"
+        for e in sorted(c["work_history"], key=lambda x: x["start_year"], reverse=True)
     )
-    with st.expander(label):
-        st.markdown(_dots_html(c["score"]), unsafe_allow_html=True)
-
-        st.markdown('<p class="section-label">Summary</p>', unsafe_allow_html=True)
-        st.write(c["summary"])
-
-        st.markdown('<p class="section-label">Experience</p>', unsafe_allow_html=True)
-        for e in sorted(c["work_history"], key=lambda x: x["start_year"], reverse=True):
-            end = e["end_year"] or "present"
-            st.markdown(f"**{e['title']}** at {e['company']}  ·  {e['start_year']}–{end}")
-            if e["description"]:
-                st.caption(e["description"])
-
-        st.markdown('<p class="section-label">Skills</p>', unsafe_allow_html=True)
-        tags = "".join(f'<span class="skill-tag">{s}</span>' for s in c["skills"])
-        st.markdown(tags, unsafe_allow_html=True)
-
-        if c["gaps"]:
-            st.markdown('<p class="section-label">Gaps</p>', unsafe_allow_html=True)
-            for g in c["gaps"]:
-                st.markdown(f"— {g}")
-
-        st.markdown('<p class="section-label">Suggestion</p>', unsafe_allow_html=True)
-        st.markdown(f"*{c['suggestion']}*")
+    skills = "  ".join(f"`{s}`" for s in c["skills"]) or "—"
+    return (
+        f"**{c['candidate_id']}** · {c['current_title']} · {c['current_employer']}"
+        f" · {c['location']} · {c['total_yoe']} yrs · {_dots(c['score'])}\n\n"
+        f"{work}\n\n"
+        f"**Skills:** {skills}"
+    )
 
 
-def main() -> None:
-    st.set_page_config(page_title="Hiring Agents", layout="wide")
-    st.markdown(_CSS, unsafe_allow_html=True)
-    st.title("Hiring Agents")
+async def _run_search(query: str, mode: str, hard_filters: dict | None = None) -> None:
+    payload: dict[str, Any] = {"query": query, "mode": mode}
+    if hard_filters:
+        payload["hard_filters"] = hard_filters
 
-    query = st.text_input("Search", placeholder="Search candidates — e.g. senior Python engineer in Berlin", label_visibility="collapsed")
-    search = st.button("Search", type="primary", disabled=not query.strip())
+    ranked: list[dict] = []
+    retrieved_count = 0
+    filters_relaxed = False
+    step_closed = False
+    step = cl.Step(name="Searching…")
+    await step.__aenter__()
 
-    if search and query.strip():
-        with st.spinner("Searching…"):
-            try:
-                data = _call_api(query.strip())
-            except httpx.HTTPStatusError as e:
-                st.error(f"API error {e.response.status_code}: {e.response.text}")
-                return
-            except httpx.ConnectError:
-                st.error(f"Could not connect to API at {UI_API_BASE_URL}. Is `make api` running?")
-                return
+    try:
+        async with httpx.AsyncClient(timeout=120) as client:
+            async with client.stream("POST", f"{UI_API_BASE_URL}/search/stream", json=payload) as resp:
+                resp.raise_for_status()
 
-        _render_query_details(data["normalized"])
-        st.markdown("---")
+                async for line in resp.aiter_lines():
+                    if not line:
+                        continue
+                    event = json.loads(line)
 
-        if data["filters_relaxed"]:
-            st.markdown(
-                '<div class="relax-banner">No results matched the original filters — seniority requirement was relaxed.</div>',
-                unsafe_allow_html=True,
-            )
+                    if event["type"] == "normalized":
+                        norm = event["data"]
+                        loc = ", ".join(norm["hard_filters"].get("location_keywords") or []) or "—"
+                        sen = ", ".join(norm["hard_filters"].get("seniority") or []) or "—"
+                        step.output = (
+                            f"**Skills:** {', '.join(norm['core_skills']) or '—'}  \n"
+                            f"**Location:** {loc}  \n**Seniority:** {sen}"
+                        )
 
-        st.markdown(f"**{len(data['ranked'])}** candidates  ·  {data['retrieved_count']} retrieved")
-        st.markdown("")
+                    elif event["type"] == "retrieved":
+                        retrieved_count = event["count"]
+                        filters_relaxed = event["filters_relaxed"]
+                        step.name = f"Retrieved {retrieved_count}"
+                        await step.__aexit__(None, None, None)
+                        step_closed = True
 
-        for c in data["ranked"]:
-            _render_card(c)
+                        if filters_relaxed:
+                            await cl.Message(
+                                content="⚠️ No results with original filters — seniority requirement was relaxed."
+                            ).send()
+
+                    elif event["type"] == "candidate":
+                        c = event["data"]
+                        ranked.append(c)
+                        entry = {k: c[k] for k in (
+                            "candidate_id", "current_title", "current_employer",
+                            "location", "total_yoe", "score", "gaps", "suggestion",
+                        )}
+                        await cl.Message(
+                            content=_candidate_md(c),
+                            actions=[cl.Action(name="add_shortlist", value=c["candidate_id"], payload=entry, label="+ Shortlist")],
+                        ).send()
+
+    except httpx.HTTPStatusError as exc:
+        await cl.Message(content=f"❌ API error {exc.response.status_code}").send()
+        return
+    except httpx.ConnectError:
+        await cl.Message(
+            content=f"❌ Cannot connect to API at {UI_API_BASE_URL}. Is `make api` running?"
+        ).send()
+        return
+    finally:
+        if not step_closed:
+            await step.__aexit__(None, None, None)
+
+    if not ranked:
+        await cl.Message(content="No candidates matched the filters.").send()
+        return
+
+    await cl.Message(
+        content=f"**{len(ranked)}** candidates · {retrieved_count} retrieved"
+    ).send()
+
+    shortlist = cl.user_session.get("shortlist") or []
+    await cl.Message(
+        content=f"Shortlist: **{len(shortlist)}** saved",
+        actions=[
+            cl.Action(name="export_shortlist", value="export", payload={}, label="Export CSV ↓"),
+            cl.Action(name="clear_shortlist", value="clear", payload={}, label="Clear Shortlist ✕"),
+        ],
+    ).send()
 
 
-if __name__ == "__main__":
-    main()
+@cl.set_starters
+async def set_starters():
+    return [
+        cl.Starter(
+            label="Job Description Search",
+            message="__jd__",
+            icon="/public/article_person.svg",
+        ),
+        cl.Starter(
+            label="Strict Search",
+            message="__strict__",
+            icon="/public/discover_tune.svg",
+        ),
+    ]
+
+
+@cl.on_chat_start
+async def on_start():
+    cl.user_session.set("shortlist", [])
+    cl.user_session.set("strict_step", None)
+    cl.user_session.set("strict_job_title", "")
+    cl.user_session.set("jd_next", False)
+
+
+@cl.on_message
+async def on_message(message: cl.Message) -> None:
+    content = message.content.strip()
+
+    if content == "__jd__":
+        cl.user_session.set("jd_next", True)
+        await cl.Message(content="Paste your job description:").send()
+        return
+
+    if content == "__strict__":
+        cl.user_session.set("strict_step", "job_title")
+        await cl.Message(
+            content="**Strict Search** — no filter relaxation.\n\nEnter job title:"
+        ).send()
+        return
+
+    if cl.user_session.get("strict_step") == "job_title":
+        cl.user_session.set("strict_job_title", content)
+        cl.user_session.set("strict_step", "awaiting_location")
+        await cl.Message(
+            content="Select location:",
+            actions=[
+                cl.Action(name="select_location", value=loc, payload={}, label=loc) for loc in LOCATIONS
+            ] + [cl.Action(name="select_location", value=_ANY, payload={}, label="Any")],
+        ).send()
+        return
+
+    if cl.user_session.get("jd_next"):
+        cl.user_session.set("jd_next", False)
+        await _run_search(content, "jd")
+        return
+
+    # Reset any stale strict state if user types freely
+    cl.user_session.set("strict_step", None)
+    await _run_search(content, "keyword")
+
+
+@cl.action_callback("select_location")
+async def on_select_location(action: cl.Action) -> None:
+    loc = action.value
+    await cl.Message(
+        content="Select seniority:",
+        actions=[
+            cl.Action(name="select_seniority", value=s, payload={}, label=s.capitalize())
+            for s in SENIORITY_VOCAB
+        ] + [cl.Action(name="select_seniority", value=_ANY, payload={}, label="Any")],
+    ).send()
+    cl.user_session.set("strict_location", loc)
+
+
+@cl.action_callback("select_seniority")
+async def on_select_seniority(action: cl.Action) -> None:
+    cl.user_session.set("strict_step", None)
+    job_title = cl.user_session.get("strict_job_title") or "software engineer"
+    location = cl.user_session.get("strict_location") or _ANY
+    seniority = action.value
+
+    hard_filters: dict[str, Any] = {}
+    if location != _ANY:
+        hard_filters["location_keywords"] = [location]
+    if seniority != _ANY:
+        hard_filters["seniority"] = [seniority]
+
+    await _run_search(job_title, "strict", hard_filters or None)
+
+
+@cl.action_callback("add_shortlist")
+async def on_add_shortlist(action: cl.Action) -> None:
+    shortlist: list[dict] = cl.user_session.get("shortlist") or []
+    entry: dict = action.payload
+    if any(c["candidate_id"] == entry["candidate_id"] for c in shortlist):
+        await cl.Message(content=f"**{entry['candidate_id']}** is already in the shortlist.").send()
+        return
+    shortlist.append(entry)
+    cl.user_session.set("shortlist", shortlist)
+    await cl.Message(
+        content=f"Added **{entry['candidate_id']}** to shortlist ({len(shortlist)} saved)."
+    ).send()
+
+
+@cl.action_callback("export_shortlist")
+async def on_export_shortlist(action: cl.Action) -> None:
+    shortlist: list[dict] = cl.user_session.get("shortlist") or []
+    if not shortlist:
+        await cl.Message(content="Shortlist is empty — add candidates first.").send()
+        return
+
+    fields = [
+        "candidate_id", "current_title", "current_employer",
+        "location", "total_yoe", "score", "gaps", "suggestion",
+    ]
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=fields)
+    writer.writeheader()
+    for c in shortlist:
+        writer.writerow({**c, "gaps": "; ".join(c.get("gaps") or [])})
+
+    await cl.Message(
+        content=f"Exported **{len(shortlist)}** candidates.",
+        elements=[cl.File(name="shortlist.csv", content=buf.getvalue().encode(), display="inline")],
+    ).send()
+
+
+@cl.action_callback("clear_shortlist")
+async def on_clear_shortlist(action: cl.Action) -> None:
+    cl.user_session.set("shortlist", [])
+    await cl.Message(content="Shortlist cleared.").send()

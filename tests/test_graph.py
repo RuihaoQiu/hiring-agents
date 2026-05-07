@@ -144,3 +144,57 @@ def test_graph_fallback_fires(monkeypatch: pytest.MonkeyPatch) -> None:
     assert state["filters_relaxed"] is True
     assert len(state["retrieved"]) == 3
     assert isinstance(state["output"], PipelineOutput)
+
+
+# --- mode tests ---
+
+def test_strict_mode_never_relaxes_filters(monkeypatch: pytest.MonkeyPatch) -> None:
+    # All candidates are junior; strict mode must NOT relax and must return empty ranked.
+    candidates = [_make_ingested(f"c{i:04d}", "junior") for i in range(3)]
+    rng = np.random.default_rng(0)
+    embeddings = rng.random((3, EMBED_DIM)).astype(np.float32)
+    query_vec = rng.random(EMBED_DIM).astype(np.float32)
+
+    async def _fake_rerank(norm, retrieved, top_k):
+        return [_make_scored(r.candidate.candidate_id) for r in retrieved]
+
+    monkeypatch.setattr("hiring_agents.graph.load_node", lambda s: {"candidates": candidates, "embeddings": embeddings})
+    monkeypatch.setattr("hiring_agents.graph.embed_query", lambda text: query_vec)
+    monkeypatch.setattr("hiring_agents.graph.rerank", _fake_rerank)
+
+    filters = HardFilters(seniority=["senior"])
+    state = build_graph().invoke({
+        "raw_query": "Data Engineer",
+        "mode": "strict",
+        "preset_filters": filters,
+    })
+    assert not state.get("filters_relaxed")
+    assert len(state["output"].retrieved) == 0
+    assert len(state["output"].ranked) == 0
+
+
+def test_jd_mode_calls_normalize_jd(monkeypatch: pytest.MonkeyPatch) -> None:
+    candidates = [_make_ingested(f"c{i:04d}", "senior") for i in range(3)]
+    rng = np.random.default_rng(42)
+    embeddings = rng.random((3, EMBED_DIM)).astype(np.float32)
+    query_vec = rng.random(EMBED_DIM).astype(np.float32)
+    normalized = _make_normalized()
+
+    normalize_jd_called = []
+
+    def _fake_normalize_jd(text: str):
+        normalize_jd_called.append(text)
+        return normalized
+
+    async def _fake_rerank(norm, retrieved, top_k):
+        return [_make_scored(r.candidate.candidate_id) for r in retrieved]
+
+    monkeypatch.setattr("hiring_agents.graph.load_node", lambda s: {"candidates": candidates, "embeddings": embeddings})
+    monkeypatch.setattr("hiring_agents.graph.normalize_jd", _fake_normalize_jd)
+    monkeypatch.setattr("hiring_agents.graph.normalize_query", lambda raw: (_ for _ in ()).throw(AssertionError("keyword normalize called in jd mode")))
+    monkeypatch.setattr("hiring_agents.graph.embed_query", lambda text: query_vec)
+    monkeypatch.setattr("hiring_agents.graph.rerank", _fake_rerank)
+
+    state = build_graph().invoke({"raw_query": "Senior Python Engineer...", "mode": "jd"})
+    assert len(normalize_jd_called) == 1
+    assert isinstance(state["output"], PipelineOutput)

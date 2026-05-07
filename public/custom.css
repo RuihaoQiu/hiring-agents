@@ -1,0 +1,21 @@
+a[href="https://chainlit.io"],
+a[href*="chainlit.io"] {
+  display: none !important;
+}
+.watermark {
+  display: none !important;
+}
+
+img[src*="logo"] {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: auto !important;
+}
+
+header img,
+[class*="logo"] img,
+[class*="Logo"] img {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: auto !important;
+}

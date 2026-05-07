@@ -1,10 +1,11 @@
 from __future__ import annotations
 
-from typing import TypedDict
+from typing import Literal, TypedDict
 
 import numpy as np
 
 from hiring_agents.schemas import (
+    HardFilters,
     IngestedCandidate,
     NormalizedQuery,
     PipelineOutput,
@@ -15,6 +16,8 @@ from hiring_agents.schemas import (
 
 class PipelineState(TypedDict, total=False):
     raw_query: str
+    mode: Literal["keyword", "jd", "strict"]
+    preset_filters: HardFilters | None
     candidates: list[IngestedCandidate]
     embeddings: np.ndarray
     normalized: NormalizedQuery

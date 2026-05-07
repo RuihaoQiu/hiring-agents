@@ -1,0 +1,23 @@
+[project]
+session_timeout = 3600
+
+[features]
+user_message_markdown = true
+unsafe_allow_html = false
+
+[features.spontaneous_file_upload]
+    enabled = false
+
+[UI]
+name = "Hiring Agent"
+confirm_new_chat = false
+cot = "full"
+custom_css = "/public/custom.css"
+custom_theme = "/public/theme.json"
+login_page_image = "/public/logo.svg"
+logo_file_url = "/public/logo.svg"
+default_avatar_file_url = "/public/group.svg"
+avatar_size = 28
+
+[meta]
+generated_by = "2.0.0"
