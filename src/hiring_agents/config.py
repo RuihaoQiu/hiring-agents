@@ -43,6 +43,9 @@ EMBED_BATCH_SIZE: int = 100
 GENERATION_LOG_EVERY: int = 25
 INGEST_LOG_EVERY: int = 25
 
+AGENT_MODEL: str = "gpt-4o"
+AGENT_TEMPERATURE: float = 0.3
+
 API_HOST: str = "0.0.0.0"
 API_PORT: int = 8000
 UI_API_BASE_URL: str = "http://localhost:8000"

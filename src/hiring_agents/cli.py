@@ -3,7 +3,6 @@ from __future__ import annotations
 import typer
 
 from hiring_agents.logging_setup import configure_logging
-from hiring_agents.pipeline import run_pipeline
 from hiring_agents.schemas import PipelineOutput
 
 app = typer.Typer(add_completion=False, no_args_is_help=True)
@@ -69,9 +68,36 @@ def query_command(
     raw: str = typer.Argument(..., help="Free-text recruiter query"),
 ) -> None:
     """Run normalize -> retrieve -> rerank on a query and print results."""
+    import asyncio
+
+    from hiring_agents.config import CANDIDATES_PATH, RERANK_TOP_K, RETRIEVAL_TOP_K, SKIP_RERANK
+    from hiring_agents.ingest import ingest_all
+    from hiring_agents.io_utils import load_models
+    from hiring_agents.llm.embeddings import embed_query
+    from hiring_agents.normalize import normalize_query
+    from hiring_agents.rerank import rerank
+    from hiring_agents.retrieve import apply_hard_filters, retrieve_top_k
+    from hiring_agents.schemas import Candidate, HardFilters, RetrievedCandidate, ScoredCandidate
+
     configure_logging()
-    output = run_pipeline(raw)
-    _print_output(output)
+    ingested, embeddings = ingest_all(load_models(CANDIDATES_PATH, Candidate))
+    normalized = normalize_query(raw)
+    allowed = apply_hard_filters(ingested, normalized.hard_filters)
+    if not allowed:
+        relaxed = HardFilters(location_keywords=normalized.hard_filters.location_keywords)
+        normalized = normalized.model_copy(update={"hard_filters": relaxed})
+        allowed = apply_hard_filters(ingested, normalized.hard_filters)
+    qvec = embed_query(normalized.canonical_summary)
+    top = retrieve_top_k(qvec, embeddings, allowed, k=RETRIEVAL_TOP_K)
+    retrieved = [RetrievedCandidate(candidate=ingested[i], similarity=s) for i, s in top]
+    if SKIP_RERANK:
+        ranked: list[ScoredCandidate] = [
+            ScoredCandidate(candidate_id=rc.candidate.candidate_id, score=3, must_have_matches=[], gaps=[], one_line_summary="")
+            for rc in retrieved[:RERANK_TOP_K]
+        ]
+    else:
+        ranked = asyncio.run(rerank(normalized, retrieved))
+    _print_output(PipelineOutput(normalized=normalized, retrieved=retrieved, ranked=ranked))
 
 
 @app.command(name="eval")
