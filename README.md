@@ -1,8 +1,7 @@
 # hiring-agents
 
-A recruiting pipeline PoC: `normalize → retrieve → rerank`, with a Chainlit chat UI and a FastAPI backend.
+A recruiting pipeline PoC: `normalize → retrieve → rerank`, with a Chainlit conversational UI backed by a LangGraph ReAct agent.
 
-- [docs/plan_v2.md](docs/plan_v2.md) — v2 architecture, Chainlit UI, streaming search
 - [docs/vision.md](docs/vision.md) — decisions, eval results, lessons learned
 
 ## Setup
@@ -16,17 +15,10 @@ cp .env.example .env   # fill in OPENAI_API_KEY (and optionally LANGFUSE_* for t
 
 ```bash
 make ingest            # embed and index candidates (run once after generate)
-make api               # start FastAPI backend on :8000
 make ui                # start Chainlit UI on :8501
 ```
 
-Open [http://localhost:8501](http://localhost:8501) and pick a search mode:
-
-- **Keyword search** — free-text query, LLM normalizes skills/location/seniority
-- **Job Description search** — paste a JD, extracts structured requirements
-- **Strict search** — select title + location + seniority, no filter relaxation
-
-Results stream in as each candidate is ranked. Add candidates to a shortlist and export as CSV.
+Open [http://localhost:8501](http://localhost:8501). The agent handles free-text queries, JD paste, and shortlist management conversationally.
 
 ## Other commands
 
@@ -50,16 +42,12 @@ make all-checks        # ruff + pytest
 
 ```
 src/hiring_agents/
-  api/          FastAPI app and routes
+  agent/        LangGraph ReAct agent (tools, prompts)
   llm/          OpenAI client, prompts, embeddings, tracing
   ui/           Chainlit app
   normalize.py  Query / JD normalization
   retrieve.py   Embedding-based retrieval
   rerank.py     LLM-based reranking
-  graph.py      LangGraph pipeline
-scripts/
-  generate_data.py   Synthetic candidate generation
-  run_eval.py        Eval harness
-data/                Candidates, embeddings, labels (git-ignored)
-public/              Chainlit UI assets
+data/           Candidates, embeddings, labels (git-ignored)
+public/         Chainlit UI assets
 ```

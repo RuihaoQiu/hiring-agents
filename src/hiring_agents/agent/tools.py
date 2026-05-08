@@ -8,27 +8,12 @@ import chainlit as cl
 import numpy as np
 from langchain_core.tools import tool
 
-from hiring_agents.config import (
-    CANDIDATES_PATH,
-    RERANK_TOP_K,
-    RETRIEVAL_TOP_K,
-    SENIORITY_VOCAB,
-    SKIP_RERANK,
-)
-from hiring_agents.ingest import ingest_all
+from hiring_agents.config import CANDIDATES_PATH
+from hiring_agents.pipeline.ingest import ingest_all
 from hiring_agents.io_utils import load_models
-from hiring_agents.llm.embeddings import embed_query
-from hiring_agents.normalize import normalize_jd, normalize_query
-from hiring_agents.rerank import rerank
-from hiring_agents.retrieve import apply_hard_filters, retrieve_top_k
-from hiring_agents.schemas import (
-    Candidate,
-    HardFilters,
-    IngestedCandidate,
-    NormalizedQuery,
-    RetrievedCandidate,
-    ScoredCandidate,
-)
+from hiring_agents.llm.tracing import observe_span
+from hiring_agents.schemas import Candidate, IngestedCandidate, ScoredCandidate
+from hiring_agents.pipeline.search import run_search
 
 logger = logging.getLogger(__name__)
 
@@ -42,57 +27,6 @@ async def _ensure_loaded() -> tuple[list[IngestedCandidate], np.ndarray]:
         raw = load_models(CANDIDATES_PATH, Candidate)
         _candidates, _embeddings = await asyncio.to_thread(ingest_all, raw)
     return _candidates, _embeddings  # type: ignore[return-value]
-
-
-async def _normalize(
-    query: str, location: str | None, seniority: list[str] | None
-) -> NormalizedQuery:
-    normalized = await asyncio.to_thread(
-        normalize_jd if len(query) > 200 else normalize_query, query
-    )
-    explicit = HardFilters(
-        location_keywords=[location] if location else None,
-        seniority=[s for s in (seniority or []) if s in SENIORITY_VOCAB] or None,
-    )
-    if explicit.location_keywords or explicit.seniority:
-        normalized = normalized.model_copy(update={"hard_filters": explicit})
-    return normalized
-
-
-async def _retrieve(
-    candidates: list[IngestedCandidate],
-    embeddings: np.ndarray,
-    normalized: NormalizedQuery,
-    strict: bool,
-) -> tuple[list[RetrievedCandidate], bool]:
-    filters_relaxed = False
-    allowed = apply_hard_filters(candidates, normalized.hard_filters)
-    if not allowed and not strict:
-        relaxed = HardFilters(location_keywords=normalized.hard_filters.location_keywords)
-        normalized = normalized.model_copy(update={"hard_filters": relaxed})
-        allowed = apply_hard_filters(candidates, normalized.hard_filters)
-        filters_relaxed = True
-    qvec = await asyncio.to_thread(embed_query, normalized.canonical_summary)
-    top = retrieve_top_k(qvec, embeddings, allowed, k=RETRIEVAL_TOP_K)
-    retrieved = [RetrievedCandidate(candidate=candidates[idx], similarity=sim) for idx, sim in top]
-    return retrieved, filters_relaxed
-
-
-async def _score(
-    normalized: NormalizedQuery, retrieved: list[RetrievedCandidate]
-) -> list[ScoredCandidate]:
-    if SKIP_RERANK:
-        return [
-            ScoredCandidate(
-                candidate_id=rc.candidate.candidate_id,
-                score=3,
-                must_have_matches=[],
-                gaps=[],
-                one_line_summary="",
-            )
-            for rc in retrieved[:RERANK_TOP_K]
-        ]
-    return await rerank(normalized, retrieved)
 
 
 def _to_result(sc: ScoredCandidate, cand: IngestedCandidate, filters_relaxed: bool) -> dict:
@@ -135,11 +69,13 @@ async def search_candidates(
         JSON array of ranked candidates sorted by fit score.
     """
     candidates, embeddings = await _ensure_loaded()
-    normalized = await _normalize(query, location, seniority)
-    retrieved, filters_relaxed = await _retrieve(candidates, embeddings, normalized, strict)
-    scored = await _score(normalized, retrieved)
-    by_id = {rc.candidate.candidate_id: rc.candidate for rc in retrieved}
-    results = [_to_result(sc, by_id[sc.candidate_id], filters_relaxed) for sc in scored]
+    with observe_span(name="search_candidates"):
+        output, filters_relaxed = await run_search(
+            query, candidates, embeddings,
+            location=location, seniority=seniority, strict=strict,
+        )
+    by_id = {rc.candidate.candidate_id: rc.candidate for rc in output.retrieved}
+    results = [_to_result(sc, by_id[sc.candidate_id], filters_relaxed) for sc in output.ranked]
     return json.dumps(results)
 
 

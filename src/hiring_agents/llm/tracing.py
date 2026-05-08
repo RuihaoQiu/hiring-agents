@@ -33,6 +33,26 @@ class _NoopObs:
 
 
 @contextmanager
+def observe_span(*, name: str) -> Generator[Any, None, None]:
+    lf = _get_client()
+    if lf is None:
+        yield _NoopObs()
+        return
+    try:
+        cm = lf.start_as_current_observation(name=name, as_type="span")
+    except Exception:
+        logger.warning("Langfuse trace failed for '%s'", name, exc_info=True)
+        yield _NoopObs()
+        return
+    with cm as span:
+        yield span
+    try:
+        lf.flush()
+    except Exception:
+        logger.warning("Langfuse flush failed for '%s'", name, exc_info=True)
+
+
+@contextmanager
 def observe_generation(
     *,
     name: str,

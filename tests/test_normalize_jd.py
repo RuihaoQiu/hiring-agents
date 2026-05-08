@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from unittest.mock import MagicMock, patch
 
-from hiring_agents.normalize import normalize_jd
+from hiring_agents.pipeline.normalize import normalize_jd
 from hiring_agents.schemas import HardFilters, NormalizedQuery
 
 _JD_TEXT = """
@@ -41,8 +41,8 @@ def test_normalize_jd_returns_normalized_query() -> None:
     mock_resp = MagicMock()
     mock_resp.choices[0].message.parsed = _mock_body()
 
-    with patch("hiring_agents.normalize.get_sync_client") as mock_client, \
-         patch("hiring_agents.normalize.observe_generation") as mock_obs:
+    with patch("hiring_agents.pipeline.normalize.get_sync_client") as mock_client, \
+         patch("hiring_agents.pipeline.normalize.observe_generation") as mock_obs:
         mock_obs.return_value.__enter__ = lambda s: MagicMock()
         mock_obs.return_value.__exit__ = MagicMock(return_value=False)
         mock_client.return_value.beta.chat.completions.parse.return_value = mock_resp

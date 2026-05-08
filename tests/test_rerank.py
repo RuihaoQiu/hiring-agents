@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pytest
 
-from hiring_agents import rerank as rerank_module
-from hiring_agents.rerank import rerank
+from hiring_agents.pipeline import rerank as rerank_module
+from hiring_agents.pipeline.rerank import rerank
 from hiring_agents.schemas import (
     HardFilters,
     IngestedCandidate,

@@ -9,27 +9,15 @@ from pathlib import Path
 from hiring_agents.config import (
     CANDIDATES_PATH,
     QUERIES_PATH,
-    RERANK_TOP_K,
     REPORTS_DIR,
     RETRIEVAL_TOP_K,
-    SKIP_RERANK,
 )
 from hiring_agents.eval.labels import load_or_generate_labels
 from hiring_agents.eval.metrics import ndcg_at_k, precision_at_k, recall_at_k
-from hiring_agents.ingest import ingest_all
+from hiring_agents.pipeline.ingest import ingest_all
 from hiring_agents.io_utils import load_models, read_json
-from hiring_agents.llm.embeddings import embed_query
-from hiring_agents.normalize import normalize_query
-from hiring_agents.rerank import rerank
-from hiring_agents.retrieve import apply_hard_filters, retrieve_top_k
-from hiring_agents.schemas import (
-    Candidate,
-    HardFilters,
-    IngestedCandidate,
-    PipelineOutput,
-    RetrievedCandidate,
-    ScoredCandidate,
-)
+from hiring_agents.schemas import Candidate, IngestedCandidate, PipelineOutput
+from hiring_agents.pipeline.search import run_search
 
 logger = logging.getLogger(__name__)
 
@@ -39,23 +27,8 @@ _NDCG_K = 10
 
 
 def _run_query(raw: str, ingested: list[IngestedCandidate], embeddings) -> PipelineOutput:
-    normalized = normalize_query(raw)
-    allowed = apply_hard_filters(ingested, normalized.hard_filters)
-    if not allowed:
-        relaxed = HardFilters(location_keywords=normalized.hard_filters.location_keywords)
-        normalized = normalized.model_copy(update={"hard_filters": relaxed})
-        allowed = apply_hard_filters(ingested, normalized.hard_filters)
-    qvec = embed_query(normalized.canonical_summary)
-    top = retrieve_top_k(qvec, embeddings, allowed, k=RETRIEVAL_TOP_K)
-    retrieved = [RetrievedCandidate(candidate=ingested[i], similarity=s) for i, s in top]
-    if SKIP_RERANK:
-        ranked: list[ScoredCandidate] = [
-            ScoredCandidate(candidate_id=rc.candidate.candidate_id, score=3, must_have_matches=[], gaps=[], one_line_summary="")
-            for rc in retrieved[:RERANK_TOP_K]
-        ]
-    else:
-        ranked = asyncio.run(rerank(normalized, retrieved))
-    return PipelineOutput(normalized=normalized, retrieved=retrieved, ranked=ranked)
+    output, _ = asyncio.run(run_search(raw, ingested, embeddings))
+    return output
 
 
 def _compute_metrics(

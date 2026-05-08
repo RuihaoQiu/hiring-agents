@@ -46,7 +46,7 @@ def test_observe_wraps_llm_call(monkeypatch: pytest.MonkeyPatch) -> None:
 # --- integration: normalize path uses observe_generation ---
 
 def test_normalize_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> None:
-    from hiring_agents.normalize import _NormalizedBody
+    from hiring_agents.pipeline.normalize import _NormalizedBody
     from hiring_agents.llm.client import get_sync_client
 
     body = _NormalizedBody(
@@ -62,7 +62,7 @@ def test_normalize_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> None:
     mock_client.beta.chat.completions.parse.return_value = mock_resp
 
     get_sync_client.cache_clear()
-    monkeypatch.setattr("hiring_agents.normalize.get_sync_client", lambda: mock_client)
+    monkeypatch.setattr("hiring_agents.pipeline.normalize.get_sync_client", lambda: mock_client)
 
     calls: list[dict] = []
 
@@ -71,9 +71,9 @@ def test_normalize_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> None:
         calls.append(kw)
         yield MagicMock()
 
-    monkeypatch.setattr("hiring_agents.normalize.observe_generation", fake_observe)
+    monkeypatch.setattr("hiring_agents.pipeline.normalize.observe_generation", fake_observe)
 
-    from hiring_agents.normalize import normalize_query
+    from hiring_agents.pipeline.normalize import normalize_query
 
     normalize_query("senior python dev")
 
@@ -84,7 +84,7 @@ def test_normalize_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> None:
 # --- integration: rerank path uses observe_generation ---
 
 async def test_rerank_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> None:
-    from hiring_agents.rerank import _ScoredBody, _call
+    from hiring_agents.pipeline.rerank import _ScoredBody, _call
     from hiring_agents.schemas import (
         IngestedCandidate,
         MustHaveMatch,
@@ -112,7 +112,7 @@ async def test_rerank_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> Non
     mock_client.beta.chat.completions.parse = fake_parse
 
     get_async_client.cache_clear()
-    monkeypatch.setattr("hiring_agents.rerank.get_async_client", lambda: mock_client)
+    monkeypatch.setattr("hiring_agents.pipeline.rerank.get_async_client", lambda: mock_client)
 
     calls: list[dict] = []
 
@@ -121,7 +121,7 @@ async def test_rerank_path_calls_observe(monkeypatch: pytest.MonkeyPatch) -> Non
         calls.append(kw)
         yield MagicMock()
 
-    monkeypatch.setattr("hiring_agents.rerank.observe_generation", fake_observe)
+    monkeypatch.setattr("hiring_agents.pipeline.rerank.observe_generation", fake_observe)
 
     work = WorkEntry(company="Acme", title="Senior Eng", start_year=2020, end_year=2024, description="...")
     structured = StructuredResume(

@@ -3,7 +3,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from hiring_agents.retrieve import (
+from hiring_agents.pipeline.retrieve import (
     apply_hard_filters,
     cosine_similarity,
     retrieve_top_k,
