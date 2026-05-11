@@ -1,4 +1,4 @@
-.PHONY: sync format lint test generate ingest query eval ui all-checks
+.PHONY: sync format lint test generate ingest query eval ui traces all-checks
 
 sync:
 	uv sync
@@ -29,3 +29,6 @@ query:
 
 ui:
 	uv run chainlit run src/hiring_agents/ui/app.py --port 8501
+
+traces:
+	uv run python scripts/check_traces.py

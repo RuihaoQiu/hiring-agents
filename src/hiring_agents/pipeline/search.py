@@ -4,8 +4,11 @@ import asyncio
 
 import numpy as np
 
-from hiring_agents.config import RERANK_TOP_K, RETRIEVAL_TOP_K, SENIORITY_VOCAB, SKIP_RERANK
+import os
+
+from hiring_agents.config import RETRIEVAL_MULTIPLIER, SEARCH_POOL_SIZE, SENIORITY_VOCAB
 from hiring_agents.llm.embeddings import embed_query
+from hiring_agents.llm.tracing import update_current_span
 from hiring_agents.pipeline.normalize import normalize_jd, normalize_query
 from hiring_agents.pipeline.rerank import rerank
 from hiring_agents.pipeline.retrieve import apply_hard_filters, retrieve_top_k
@@ -48,11 +51,17 @@ async def run_search(
         allowed = apply_hard_filters(ingested, normalized.hard_filters)
         filters_relaxed = True
 
+    update_current_span(metadata={
+        "hard_filters": normalized.hard_filters.model_dump(),
+        "filters_relaxed": filters_relaxed,
+        "candidates_after_filter": len(allowed),
+    })
+
     qvec = await asyncio.to_thread(embed_query, normalized.canonical_summary)
-    top = retrieve_top_k(qvec, embeddings, allowed, k=RETRIEVAL_TOP_K)
+    top = retrieve_top_k(qvec, embeddings, allowed, k=SEARCH_POOL_SIZE * RETRIEVAL_MULTIPLIER)
     retrieved = [RetrievedCandidate(candidate=ingested[idx], similarity=sim) for idx, sim in top]
 
-    if SKIP_RERANK:
+    if os.getenv("SKIP_RERANK", "").lower() in ("1", "true", "yes"):
         ranked: list[ScoredCandidate] = [
             ScoredCandidate(
                 candidate_id=rc.candidate.candidate_id,
@@ -61,10 +70,10 @@ async def run_search(
                 gaps=[],
                 one_line_summary="",
             )
-            for rc in retrieved[:RERANK_TOP_K]
+            for rc in retrieved[:SEARCH_POOL_SIZE]
         ]
     else:
-        ranked = await rerank(normalized, retrieved)
+        ranked = await rerank(normalized, retrieved, top_k=SEARCH_POOL_SIZE)
 
     output = PipelineOutput(normalized=normalized, retrieved=retrieved, ranked=ranked)
     return output, filters_relaxed

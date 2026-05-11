@@ -17,6 +17,7 @@ dependencies = [
     "tqdm>=4.0",
     "langfuse>=2.0",
     "chainlit>=2.0.0",
+    "langchain>=1.2.17",
 ]
 
 [project.scripts]

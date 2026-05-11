@@ -3,10 +3,12 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, TypeVar
 
 import numpy as np
 from pydantic import BaseModel, TypeAdapter
+
+_T = TypeVar("_T", bound=BaseModel)
 
 _JSON_INDENT = 2
 
@@ -22,7 +24,7 @@ def write_json(path: Path, data: Any) -> None:
         json.dump(data, f, indent=_JSON_INDENT, ensure_ascii=False)
 
 
-def load_models[T: BaseModel](path: Path, model: type[T]) -> list[T]:
+def load_models(path: Path, model: type[_T]) -> list[_T]:
     adapter = TypeAdapter(list[model])
     return adapter.validate_python(read_json(path))
 

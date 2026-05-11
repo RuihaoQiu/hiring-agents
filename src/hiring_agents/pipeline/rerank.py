@@ -11,9 +11,9 @@ from hiring_agents.config import (
     RERANK_MAX_RETRIES,
     RERANK_MODEL,
     RERANK_TEMPERATURE,
-    RERANK_TOP_K,
     SCORE_MAX,
     SCORE_MIN,
+    SEARCH_POOL_SIZE,
 )
 from hiring_agents.llm.client import get_async_client
 from hiring_agents.llm.prompts import RERANK_SYSTEM, RERANK_USER
@@ -40,7 +40,7 @@ class _ScoredBody(BaseModel):
 async def rerank(
     normalized: NormalizedQuery,
     retrieved: list[RetrievedCandidate],
-    top_k: int = RERANK_TOP_K,
+    top_k: int = SEARCH_POOL_SIZE,
     concurrency: int = RERANK_CONCURRENCY,
 ) -> list[ScoredCandidate]:
     if not retrieved:
