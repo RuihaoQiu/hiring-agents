@@ -19,13 +19,17 @@ logger = logging.getLogger(__name__)
 
 _candidates: list[IngestedCandidate] | None = None
 _embeddings: np.ndarray | None = None
+_load_lock = asyncio.Lock()
 
 
 async def _ensure_loaded() -> tuple[list[IngestedCandidate], np.ndarray]:
     global _candidates, _embeddings
-    if _candidates is None:
-        raw = load_models(CANDIDATES_PATH, Candidate)
-        _candidates, _embeddings = await asyncio.to_thread(ingest_all, raw)
+    if _candidates is not None:
+        return _candidates, _embeddings  # type: ignore[return-value]
+    async with _load_lock:
+        if _candidates is None:
+            raw = load_models(CANDIDATES_PATH, Candidate)
+            _candidates, _embeddings = await asyncio.to_thread(ingest_all, raw)
     return _candidates, _embeddings  # type: ignore[return-value]
 
 

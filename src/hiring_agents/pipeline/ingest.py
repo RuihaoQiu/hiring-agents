@@ -162,7 +162,7 @@ def _load_cache(
     envelope = read_json(ingested_path)
     if envelope.get(_SOURCE_HASH_KEY) != source_hash:
         return None
-    items = [IngestedCandidate(**raw) for raw in envelope[_ITEMS_KEY]]
+    items = [IngestedCandidate.model_validate(raw) for raw in envelope[_ITEMS_KEY]]
     embeddings = load_embeddings(embeddings_path)
     if len(items) != expected_count or embeddings.shape != (expected_count, EMBEDDING_DIM):
         return None

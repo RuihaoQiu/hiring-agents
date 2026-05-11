@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 import asyncio
+import os
 
 import numpy as np
-
-import os
 
 from hiring_agents.config import RETRIEVAL_MULTIPLIER, SEARCH_POOL_SIZE, SENIORITY_VOCAB
 from hiring_agents.llm.embeddings import embed_query

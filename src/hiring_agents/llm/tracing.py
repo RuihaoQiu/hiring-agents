@@ -54,6 +54,26 @@ class _NoopObs:
 
 
 @contextmanager
+def _observe(name: str, **kwargs: Any) -> Generator[Any, None, None]:
+    lf = _get_client()
+    if lf is None:
+        yield _NoopObs()
+        return
+    try:
+        cm = lf.start_as_current_observation(name=name, **kwargs)
+    except Exception:
+        logger.warning("Langfuse observation failed for '%s'", name, exc_info=True)
+        yield _NoopObs()
+        return
+    with cm as obs:
+        yield obs
+    try:
+        lf.flush()
+    except Exception:
+        logger.warning("Langfuse flush failed for '%s'", name, exc_info=True)
+
+
+@contextmanager
 def observe_trace(
     *,
     name: str,
@@ -61,29 +81,32 @@ def observe_trace(
     trace_id: str | None = None,
     metadata: dict | None = None,
 ) -> Generator[Any, None, None]:
-    lf = _get_client()
-    if lf is None:
-        yield _NoopObs()
-        return
-    try:
-        cm = lf.start_as_current_observation(
-            name=name,
+    with _prop_ctx(session_id):
+        with _observe(
+            name,
             as_type="span",
             trace_context={"trace_id": trace_id} if trace_id else None,
             metadata=metadata or {},
-        )
-    except Exception:
-        logger.warning("Langfuse trace failed for '%s'", name, exc_info=True)
-        yield _NoopObs()
-        return
-    prop = _prop_ctx(session_id)
-    with prop:
-        with cm as span:
-            yield span
-    try:
-        lf.flush()
-    except Exception:
-        logger.warning("Langfuse flush failed for '%s'", name, exc_info=True)
+        ) as obs:
+            yield obs
+
+
+@contextmanager
+def observe_span(*, name: str) -> Generator[Any, None, None]:
+    with _observe(name, as_type="span") as obs:
+        yield obs
+
+
+@contextmanager
+def observe_generation(
+    *,
+    name: str,
+    model: str,
+    input: Any,
+    metadata: dict | None = None,
+) -> Generator[Any, None, None]:
+    with _observe(name, as_type="generation", model=model, input=input, metadata=metadata or {}) as obs:
+        yield obs
 
 
 def update_current_span(**kwargs: Any) -> None:
@@ -109,55 +132,3 @@ def _prop_ctx(session_id: str | None) -> Any:
         return propagate_attributes(session_id=session_id)
     except Exception:
         return nullcontext()
-
-
-@contextmanager
-def observe_span(*, name: str) -> Generator[Any, None, None]:
-    lf = _get_client()
-    if lf is None:
-        yield _NoopObs()
-        return
-    try:
-        cm = lf.start_as_current_observation(name=name, as_type="span")
-    except Exception:
-        logger.warning("Langfuse trace failed for '%s'", name, exc_info=True)
-        yield _NoopObs()
-        return
-    with cm as span:
-        yield span
-    try:
-        lf.flush()
-    except Exception:
-        logger.warning("Langfuse flush failed for '%s'", name, exc_info=True)
-
-
-@contextmanager
-def observe_generation(
-    *,
-    name: str,
-    model: str,
-    input: Any,
-    metadata: dict | None = None,
-) -> Generator[Any, None, None]:
-    lf = _get_client()
-    if lf is None:
-        yield _NoopObs()
-        return
-    try:
-        cm = lf.start_as_current_observation(
-            name=name,
-            as_type="generation",
-            model=model,
-            input=input,
-            metadata=metadata or {},
-        )
-    except Exception:
-        logger.warning("Langfuse trace failed for '%s'", name, exc_info=True)
-        yield _NoopObs()
-        return
-    with cm as gen:
-        yield gen
-    try:
-        lf.flush()
-    except Exception:
-        logger.warning("Langfuse flush failed for '%s'", name, exc_info=True)

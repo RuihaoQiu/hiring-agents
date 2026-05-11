@@ -65,16 +65,19 @@ async def test_empty_retrieved_returns_empty() -> None:
 async def test_sort_by_score_then_met_and_truncates(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    # top_k=3 means only the first 3 candidates (by similarity order) are scored.
+    # c04 is 4th and must not appear. Within the scored set, sort is score desc, met desc.
     table = {
         "c01": _scored("c01", score=3, met=2),
         "c02": _scored("c02", score=5, met=0),
         "c03": _scored("c03", score=5, met=2),
-        "c04": _scored("c04", score=4, met=1),
     }
+    scored_ids: list[str] = []
 
     async def fake_score_one(
         normalized: NormalizedQuery, rc: RetrievedCandidate
     ) -> ScoredCandidate:
+        scored_ids.append(rc.candidate.candidate_id)
         return table[rc.candidate.candidate_id]
 
     monkeypatch.setattr(rerank_module, "_score_one", fake_score_one)
@@ -82,7 +85,8 @@ async def test_sort_by_score_then_met_and_truncates(
     retrieved = [_retrieved(cid) for cid in ["c01", "c02", "c03", "c04"]]
     out = await rerank(_normalized(), retrieved, top_k=3)
 
-    assert [s.candidate_id for s in out] == ["c03", "c02", "c04"]
+    assert "c04" not in scored_ids
+    assert [s.candidate_id for s in out] == ["c03", "c02", "c01"]
 
 
 async def test_top_k_larger_than_pool(monkeypatch: pytest.MonkeyPatch) -> None:

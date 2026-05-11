@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import asyncio
 import json
-import logging
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from pydantic import BaseModel, ConfigDict, Field
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from hiring_agents.config import (
+    LLM_RETRY_WAIT_MAX_SECONDS,
+    LLM_RETRY_WAIT_MIN_SECONDS,
     RERANK_CONCURRENCY,
     RERANK_MAX_RETRIES,
     RERANK_MODEL,
@@ -25,7 +27,12 @@ from hiring_agents.schemas import (
     ScoredCandidate,
 )
 
-logger = logging.getLogger(__name__)
+_RETRY = retry(
+    stop=stop_after_attempt(RERANK_MAX_RETRIES + 1),
+    wait=wait_exponential(
+        multiplier=1, min=LLM_RETRY_WAIT_MIN_SECONDS, max=LLM_RETRY_WAIT_MAX_SECONDS
+    ),
+)
 
 
 class _ScoredBody(BaseModel):
@@ -43,7 +50,8 @@ async def rerank(
     top_k: int = SEARCH_POOL_SIZE,
     concurrency: int = RERANK_CONCURRENCY,
 ) -> list[ScoredCandidate]:
-    if not retrieved:
+    candidates = retrieved[:top_k]
+    if not candidates:
         return []
     sem = asyncio.Semaphore(concurrency)
 
@@ -51,9 +59,9 @@ async def rerank(
         async with sem:
             return await _score_one(normalized, rc)
 
-    scored = await asyncio.gather(*(bounded(rc) for rc in retrieved))
+    scored = await asyncio.gather(*(bounded(rc) for rc in candidates))
     scored.sort(key=_sort_key)
-    return scored[:top_k]
+    return list(scored)
 
 
 def _sort_key(s: ScoredCandidate) -> tuple[int, int]:
@@ -61,31 +69,18 @@ def _sort_key(s: ScoredCandidate) -> tuple[int, int]:
     return (-s.score, -met_count)
 
 
+@_RETRY
 async def _score_one(
     normalized: NormalizedQuery, rc: RetrievedCandidate
 ) -> ScoredCandidate:
-    attempts = RERANK_MAX_RETRIES + 1
-    for attempt in range(1, attempts + 1):
-        try:
-            body = await _call(normalized, rc)
-        except ValidationError:
-            logger.warning(
-                "rerank validation failed for %s (%d/%d)",
-                rc.candidate.candidate_id,
-                attempt,
-                attempts,
-            )
-            if attempt >= attempts:
-                raise
-            continue
-        return ScoredCandidate(
-            candidate_id=rc.candidate.candidate_id,
-            score=body.score,
-            must_have_matches=body.must_have_matches,
-            gaps=body.gaps,
-            one_line_summary=body.one_line_summary,
-        )
-    raise RuntimeError("unreachable")
+    body = await _call(normalized, rc)
+    return ScoredCandidate(
+        candidate_id=rc.candidate.candidate_id,
+        score=body.score,
+        must_have_matches=body.must_have_matches,
+        gaps=body.gaps,
+        one_line_summary=body.one_line_summary,
+    )
 
 
 async def _call(normalized: NormalizedQuery, rc: RetrievedCandidate) -> _ScoredBody:

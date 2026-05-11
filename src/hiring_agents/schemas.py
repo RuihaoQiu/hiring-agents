@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field
 
 from hiring_agents.config import SCORE_MAX, SCORE_MIN
 
@@ -77,13 +77,6 @@ class ScoredCandidate(_Frozen):
     must_have_matches: list[MustHaveMatch]
     gaps: list[str]
     one_line_summary: str
-
-    @field_validator("score")
-    @classmethod
-    def _score_in_range(cls, v: int) -> int:
-        if not SCORE_MIN <= v <= SCORE_MAX:
-            raise ValueError(f"score {v} outside [{SCORE_MIN}, {SCORE_MAX}]")
-        return v
 
 
 class PipelineOutput(_Frozen):
